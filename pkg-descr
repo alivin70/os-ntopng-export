@@ -1,0 +1,9 @@
+Export the hourly traffic history of single hosts, as shown by the
+ntopng charts, to a CSV file (values in MB), straight from the
+OPNsense web interface.
+
+The plugin queries the ntopng REST API, so it works with ntopng
+Community edition. Select a day and one of the configured IP addresses
+under Services -> ntopng Export and download the result.
+
+WWW: https://github.com/alivin70/os-ntopng-export

@@ -1,0 +1,46 @@
+<form>
+    <field>
+        <id>ntopngexport.general.Url</id>
+        <label>ntopng URL</label>
+        <type>text</type>
+        <help>Base address of the ntopng web interface, for example https://127.0.0.1:3443</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.VerifySsl</id>
+        <label>Verify certificate</label>
+        <type>checkbox</type>
+        <help>Leave disabled when ntopng uses a self-signed certificate.</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.IfId</id>
+        <label>ntopng interface id</label>
+        <type>text</type>
+        <help>The value after "ifid:" in the ntopng requests (visible in the page URL when browsing an interface in ntopng).</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.ApiToken</id>
+        <label>API token</label>
+        <type>password</type>
+        <help>Recommended. If set it is used instead of username and password. Create one in ntopng: user menu, Manage Users, API token.</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.Username</id>
+        <label>Username</label>
+        <type>text</type>
+        <help>Used only when no API token is set.</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.Password</id>
+        <label>Password</label>
+        <type>password</type>
+        <help>Used only when no API token is set. It is stored in the OPNsense configuration.</help>
+    </field>
+    <field>
+        <id>ntopngexport.general.Hosts</id>
+        <label>Hosts</label>
+        <type>select_multiple</type>
+        <style>tokenize</style>
+        <allownew>true</allownew>
+        <help>IP addresses that can be selected on the export page.</help>
+    </field>
+</form>

@@ -1,0 +1,47 @@
+<model>
+    <mount>//OPNsense/ntopngexport</mount>
+    <version>1.0.0</version>
+    <description>ntopng traffic export settings</description>
+    <items>
+        <general>
+            <Url type="TextField">
+                <Required>Y</Required>
+                <Default>https://127.0.0.1:3443</Default>
+                <Mask>/^https?:\/\/[A-Za-z0-9.\-:\[\]]+$/</Mask>
+                <ValidationMessage>Please enter a valid URL, for example https://127.0.0.1:3443</ValidationMessage>
+            </Url>
+            <VerifySsl type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </VerifySsl>
+            <IfId type="IntegerField">
+                <Required>Y</Required>
+                <Default>0</Default>
+                <MinimumValue>0</MinimumValue>
+                <MaximumValue>999</MaximumValue>
+                <ValidationMessage>Please enter a valid ntopng interface id.</ValidationMessage>
+            </IfId>
+            <Username type="TextField">
+                <Required>N</Required>
+                <Mask>/^[^\s:]{1,64}$/</Mask>
+                <ValidationMessage>Invalid username (no spaces or colons).</ValidationMessage>
+            </Username>
+            <Password type="TextField">
+                <Required>N</Required>
+            </Password>
+            <ApiToken type="TextField">
+                <Required>N</Required>
+                <Mask>/^[A-Za-z0-9_\-]{1,128}$/</Mask>
+                <ValidationMessage>Invalid API token.</ValidationMessage>
+            </ApiToken>
+            <Hosts type="NetworkField">
+                <Required>Y</Required>
+                <NetMaskRequired>N</NetMaskRequired>
+                <WildcardEnabled>N</WildcardEnabled>
+                <FieldSeparator>,</FieldSeparator>
+                <AsList>Y</AsList>
+                <ValidationMessage>Only valid IP addresses are allowed.</ValidationMessage>
+            </Hosts>
+        </general>
+    </items>
+</model>

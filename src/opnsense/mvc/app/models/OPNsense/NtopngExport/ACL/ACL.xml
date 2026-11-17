@@ -1,0 +1,9 @@
+<acl>
+    <page-services-ntopngexport>
+        <name>Services: ntopng Export</name>
+        <patterns>
+            <pattern>ui/ntopngexport/*</pattern>
+            <pattern>api/ntopngexport/*</pattern>
+        </patterns>
+    </page-services-ntopngexport>
+</acl>

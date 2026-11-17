@@ -1,0 +1,8 @@
+<menu>
+    <Services>
+        <NtopngExport VisibleName="ntopng Export" cssClass="fa fa-download fa-fw">
+            <Export VisibleName="Export" url="/ui/ntopngexport/index"/>
+            <Settings VisibleName="Settings" url="/ui/ntopngexport/settings"/>
+        </NtopngExport>
+    </Services>
+</menu>
